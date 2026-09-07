@@ -1,0 +1,102 @@
+.stgo-product-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stgo-product-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.stgo-product-img {
+    position: relative;
+}
+.stgo-product-img, .stgo-product-img img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+.stgo-img-nav .stgo-img-nav-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.stgo-img-nav .stgo-img-nav-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.stgo-img-nav > button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+}
+.stgo-img-nav > button:disabled {
+    opacity: .2;
+}
+.stgo-img-nav > button > svg {
+    width: 100%;
+    height: 100%;
+}
+.stgo-product-item .stgo-product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+}
+.stgo-product-title {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+.stgo-product-artist {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 0 10px;
+}
+.stgo-product-category {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 10px;
+    flex: 1;
+    background-color: #F1EF20;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.stgo-product-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+.stgo-product-qty {
+    display: flex;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.stgo-product-qty * {
+    width: 30px;
+    height: 30px;
+}
+.stgo-product-qty .qty-txt {
+    font-size: 14px;
+    line-height: 30px;
+}
+.stgo-product-qty button {
+    border-radius: 0;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+}
