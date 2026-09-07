@@ -8,11 +8,11 @@ En esta primera entrega no hay backend: los productos se simulan con un archivo 
 
 ### Vista general
 
-![Vista general del e-commerce](./screenshots/home.png)
+![Vista general del sitio](./screenshots/captura-sitio-completo.png)
 
 ### Búsqueda y tarjetas de producto
 
-![Búsqueda y tarjetas de producto](./screenshots/productos.png)
+![Tarjeta de producto](./screenshots/captura-card.png)
 
 ## Componentes
 
