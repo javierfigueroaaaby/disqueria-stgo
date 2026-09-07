@@ -1,41 +1,25 @@
 # Disquería Stgo
 
-E-commerce de discos desarrollado en React + TypeScript como parte del Diplomado. Es una tienda online de CDs (grunge, post punk, trip hop, R&B, entre otros) que permite explorar el catálogo, ver la portada y contraportada de cada álbum y elegir la cantidad a comprar.
+## Descripción
 
-En esta primera entrega no hay backend: los productos se simulan con un archivo local (`src/data/products.ts`).
+E-commerce de una disquería que vende CDs. El sitio muestra un catálogo de discos con su portada y contraportada, artista, categoría musical y precio en pesos chilenos, y permite elegir la cantidad de unidades de cada CD.
 
-## Capturas de pantalla
+Proyecto desarrollado en React + TypeScript para la tarea "Componentes Custom para E-commerce". En esta entrega no hay backend: los productos se simulan con un archivo local (`src/data/products.ts`).
 
-### Vista general
+## Componentes creados
 
-![Vista general del sitio](./screenshots/captura-sitio-completo.png)
+Cada componente está en su propia carpeta dentro de `src/components/`, con su archivo `.tsx` y su `.css`.
 
-### Tarjetas de producto
+- **Header**: barra superior con aviso de envíos, logo de la tienda, menú de navegación e ícono de carrito.
+- **Hero**: banner principal con título, subtítulo, imagen de fondo y botón. Recibe todo su contenido por props.
+- **Button**: botón reutilizable con variantes `primary` y `secondary`. Recibe texto, URL, color y target por props.
+- **ProductList**: recibe el arreglo de productos por props y renderiza un `ProductCard` por cada uno usando `map` y `key`.
+- **ProductCard**: muestra nombre, artista, categoría, precio e imágenes del CD. Recibe el producto por props y maneja estado con `useState` para el carrusel de imágenes (portada / contraportada) y el selector de cantidad.
+- **Footer**: logo y texto de derechos reservados.
 
-![Tarjeta de producto](./screenshots/captura-card.png)
+## Simulación de datos
 
-## Componentes
-
-Todos los componentes viven en `src/components/`, cada uno en su propia carpeta con su `.tsx` y su `.css`.
-
-| Componente | Descripción |
-|---|---|
-| `Header` | Barra superior con aviso de envíos, logo de la tienda, navegación por anclas e ícono de carrito. |
-| `Hero` | Banner principal con título, subtítulo, imagen de fondo y botón de llamada a la acción. Recibe todo por props. |
-| `Button` | Botón reutilizable con variantes `primary` y `secondary`. Recibe texto, URL, color y target por props. |
-| `SearchBar` | Input controlado para buscar productos por nombre o artista. Su valor vive en el estado de `App`. |
-| `ProductList` | Recibe un arreglo de productos y renderiza un `ProductCard` por cada uno usando `map` y `key`. |
-| `ProductCard` | Muestra nombre, artista, categoría, precio en CLP e imágenes del producto. Maneja estado con `useState` para el carrusel de imágenes (portada/contraportada) y el selector de cantidad. |
-| `Footer` | Logo y texto de derechos reservados. |
-
-### Manejo de estado
-
-- `App`: guarda el texto de búsqueda (`useState`) y filtra los productos antes de pasarlos a `ProductList`.
-- `ProductCard`: guarda el índice de la imagen visible y la cantidad seleccionada (`useState`).
-
-## Datos simulados
-
-`src/data/products.ts` exporta la interfaz `Product` y un arreglo de 8 discos. Cada producto tiene:
+`src/data/products.ts` exporta la interfaz `Product` y un arreglo de 8 CDs. Cada producto tiene:
 
 ```ts
 {
@@ -48,7 +32,7 @@ Todos los componentes viven en `src/components/`, cada uno en su propia carpeta 
 }
 ```
 
-## Cómo ejecutar el proyecto
+## Instrucciones para ejecutar el proyecto
 
 Requisitos: Node.js 18 o superior.
 
@@ -66,7 +50,7 @@ npm run dev
 
 Luego abrir `http://localhost:5173` en el navegador.
 
-Otros comandos disponibles:
+Otros comandos:
 
 ```bash
 npm run build     # compila TypeScript y genera la versión de producción en /dist
@@ -76,26 +60,36 @@ npm run lint      # ejecuta ESLint
 
 ## Tecnologías usadas
 
-- [React 19](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vite.dev/)
-- CSS puro (un archivo por componente + estilos globales en `index.css`)
+- React 19
+- TypeScript
+- Vite
+- CSS (un archivo por componente + estilos globales en `index.css`)
 - ESLint
+- Git y GitHub
+
+## Capturas de pantalla
+
+### Vista general del e-commerce
+
+![Vista general del e-commerce](./screenshots/captura-sitio-completo.png)
+
+### Tarjeta de producto
+
+![Tarjeta de producto con carrusel de imágenes y selector de cantidad](./screenshots/captura-card.png)
 
 ## Estructura del proyecto
 
 ```
 src/
 ├── assets/
-│   └── img/            # portadas, contraportadas, logo, hero
+│   └── img/            # portadas, contraportadas, logo y hero
 ├── components/
 │   ├── Button/
 │   ├── Footer/
 │   ├── Header/
 │   ├── Hero/
 │   ├── ProductCard/
-│   ├── ProductList/
-│   └── SearchBar/
+│   └── ProductList/
 ├── data/
 │   └── products.ts     # datos simulados
 ├── App.tsx
@@ -106,8 +100,16 @@ src/
 
 ## Flujo de trabajo con Git
 
-El desarrollo se hizo de forma progresiva usando ramas por funcionalidad, integradas a `main` mediante Pull Requests.
+El desarrollo se hizo de forma progresiva: una rama por componente, integrada a `main` mediante Pull Request.
+
+- `feature/componente_header`
+- `feature/componente_footer`
+- `feature/componente_button`
+- `feature/componente_hero`
+- `feature/componente_productcard`
+- `feature/componente_productlist`
+- `style/estilos_generales`
 
 ## Autor
 
-Javier Figueroa — Diplomado, 2026
+Javier Figueroa
