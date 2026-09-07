@@ -10,7 +10,7 @@ En esta primera entrega no hay backend: los productos se simulan con un archivo 
 
 ![Vista general del sitio](./screenshots/captura-sitio-completo.png)
 
-### Búsqueda y tarjetas de producto
+### Tarjetas de producto
 
 ![Tarjeta de producto](./screenshots/captura-card.png)
 
