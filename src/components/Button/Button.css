@@ -1,0 +1,18 @@
+.button-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #777777;
+    color: #ffffff;
+    text-align: center;
+}
+.button-link:hover {
+    opacity: .8;
+    transition: all .25s ease;
+}
+.button-link.primary {
+    background-color: #EA3531;
+}
+.button-link.secondary {
+    background-color: #000000;
+}
