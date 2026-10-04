@@ -4,8 +4,12 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import './App.css'
 import ProductList from './components/ProductList/ProductList'
+import { useState } from 'react'
+import SearchBar from './components/SearchBar/SearchBar'
 
 function App() {
+  const [search, setSearch] = useState('')
+
 
   return (   
     <>
@@ -21,12 +25,11 @@ function App() {
             buttonTarget="_self"
           />
       </section>
-
       <section id="products" className="section-py">
         <h2>Productos Destacados</h2>
-        <ProductList />
+        <SearchBar value={search} onChange={setSearch} placeholder="Buscar productos..." />
+        <ProductList search={search} />
       </section> 
-
       <Footer />
     </>
   )
