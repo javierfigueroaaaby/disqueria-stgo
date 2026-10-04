@@ -1,12 +1,12 @@
-import { products } from './data/products'
-import ProductList from './components/ProductList/ProductList'
 import heroImg from './assets/img/hero.jpg'
 import Hero from './components/Hero/Hero'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import './App.css'
+import ProductList from './components/ProductList/ProductList'
 
 function App() {
+
   return (   
     <>
       <Header />
@@ -21,10 +21,12 @@ function App() {
             buttonTarget="_self"
           />
       </section>
+
       <section id="products" className="section-py">
         <h2>Productos Destacados</h2>
-        <ProductList products={products} />
-      </section>
+        <ProductList />
+      </section> 
+
       <Footer />
     </>
   )

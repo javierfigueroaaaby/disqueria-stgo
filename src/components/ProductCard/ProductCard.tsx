@@ -1,7 +1,6 @@
-import type { Product } from '../../data/products'
 import './ProductCard.css'
 import { useState } from 'react'
-
+import type { Product } from '../../types/product'
 
 interface ProductCardProps {
     product: Product
@@ -19,6 +18,8 @@ function ProductCard({product}: ProductCardProps) {
     return (<article className='stgo-product-item'>
                 <div className='stgo-product-img'>
                     <img src={product.images[indice]} />
+
+                    {product.images.length > 1 && (
                     <div className='stgo-img-nav'>
                         <button className='stgo-img-nav-prev' onClick={prev} disabled={indice === 0}>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -31,12 +32,13 @@ function ProductCard({product}: ProductCardProps) {
                             </svg>
                         </button>
                     </div>
+                    )}
                 </div>                
                 <div className="stgo-product-info">
-                    <h3 className='stgo-product-title'>{product.name}</h3>
-                    <div className='stgo-product-artist'>{product.artist}</div>
+                    <h3 className='stgo-product-title'>{product.title}</h3>
+                    <div className='stgo-product-artist'>{product.brand}</div>
                     <div className='stgo-product-category'>{product.category}</div>
-                    <div className='stgo-product-price'>{product.price.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' })}</div>
+                    <div className='stgo-product-price'>US${product.price}</div>
                     <div className="stgo-product-qty">
                         <button className="qty-minus" onClick={minus} disabled={qty === 1}>-</button>
                         <span className="qty-txt">{qty}</span>
