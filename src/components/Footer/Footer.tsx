@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-nav">
           <MainMenu />
         </div>
-        <p className="footer-copyright">&copy; 2026 Disquería Stgo. Todos los derechos reservados.</p>
+        <p className="footer-copyright">&copy; 2026 Shopping Stgo. Todos los derechos reservados.</p>
     </footer>
   );
 }
