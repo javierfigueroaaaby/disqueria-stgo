@@ -1,0 +1,20 @@
+.stgo-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+}
+
+.stgo-loader-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e5e5e5;
+  border-top-color: #e63329;
+  border-radius: 50%;
+  animation: stgo-spin 0.8s linear infinite;
+}
+
+@keyframes stgo-spin {
+  to { transform: rotate(360deg); }
+}

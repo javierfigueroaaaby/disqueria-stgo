@@ -1,0 +1,28 @@
+.stgo-error {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  border: 1px solid #f5c2c0;
+  border-radius: 8px;
+  background: #fdecea;
+  text-align: center;
+}
+
+.stgo-error-title {
+  font-weight: 600;
+  color: #b3261e;
+  margin-bottom: 0.5rem;
+}
+
+.stgo-error-detail {
+  margin-bottom: 1rem;
+}
+
+.stgo-error-retry {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  background: #e63329;
+  color: #fff;
+  cursor: pointer;
+}
