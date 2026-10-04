@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer>
         <div className="logo">
-            <img src={logo} alt="Disquería Stgo" />
+            <img src={logo} alt="Shopping Stgo" />
         </div>
         <div className="footer-nav">
           <MainMenu />
