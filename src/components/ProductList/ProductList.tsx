@@ -3,7 +3,11 @@ import type { Product } from '../../types/product'
 import './ProductList.css'
 import ProductCard from '../ProductCard/ProductCard'
 
-function ProductList() {
+type ProductListProps = {
+  search: string
+}
+
+function ProductList({ search }: ProductListProps) {
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -26,12 +30,17 @@ function ProductList() {
     fetchProducts()
   }, [])
 
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  )
+
   if (loading) return <p>Cargando productos...</p>
   if (error) return <p>Error: {error}</p>
+  if (filteredProducts.length === 0) return <p>No se encontraron productos.</p>
 
   return (
     <div className="stgo-products-grid">
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}
     </div>
