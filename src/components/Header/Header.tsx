@@ -13,7 +13,7 @@ function Header() {
         </div>
         <div className="header-logo-nav-icons">
             <div className="logo">
-                <img src={logo} alt="Disquería Stgo" />
+                <img src={logo} alt="Shopping Stgo" />
             </div>
             <div className="header-nav">
                 <MainMenu />

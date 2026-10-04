@@ -17,7 +17,7 @@ function ProductCard({product}: ProductCardProps) {
 
     return (<article className='stgo-product-item'>
                 <div className='stgo-product-img'>
-                    <img src={product.images[indice]} />
+                    <img src={product.images[indice]} alt={product.title} />
 
                     {product.images.length > 1 && (
                     <div className='stgo-img-nav'>
