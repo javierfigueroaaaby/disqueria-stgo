@@ -1,4 +1,4 @@
-import heroImg from './assets/img/hero.jpg'
+import heroImg from './assets/img/hero-shopping.jpg'
 import Hero from './components/Hero/Hero'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -16,8 +16,8 @@ function App() {
       <Header />
       <section id="nosotros">
         <Hero
-            title="Disquería Stgo"
-            subtitle="Encuentra la música de tu vida"
+            title="Shopping Stgo"
+            subtitle="Encuentra lo apropiado para ti"
             buttonText="Ver productos"
             image={heroImg}
             buttonColor="primary"

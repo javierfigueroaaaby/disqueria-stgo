@@ -19,10 +19,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-header .logo {
-    width: 200px;
-    flex: 0 0 200px;
-}
 header .logo img {
     width: 100%;
 }
@@ -76,7 +72,10 @@ header .header-mobile-nav nav ul {
         display: block;
     }
     .header-logo-nav-icons {
-        padding: 20px;
+        padding: 10px;
+    }
+    header .logo {
+        max-width: 100px;
     }
 }
 @media (min-width: 769px) {
@@ -86,6 +85,10 @@ header .header-mobile-nav nav ul {
     .header-icons {
         flex: 0 0 200px;
         width: 200px;
+    }
+    header .logo {
+        width: 200px;
+        flex: 0 0 200px;
     }
     .header-logo-nav-icons {
         padding: 20px 50px;

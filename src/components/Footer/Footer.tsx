@@ -1,5 +1,5 @@
 import './Footer.css';
-import logo from '../../assets/img/logo-stgo-2.png'
+import logo from '../../assets/img/logo-shopping-stgo-2.png'
 import MainMenu from '../MainMenu/MainMenu';
 
 function Footer() {

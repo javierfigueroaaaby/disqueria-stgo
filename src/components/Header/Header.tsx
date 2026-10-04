@@ -1,5 +1,5 @@
 import './Header.css';
-import logo from '../../assets/img/logo-stgo.png'
+import logo from '../../assets/img/logo-shopping-stgo-1.png'
 import MainMenu from '../MainMenu/MainMenu';
 import { useState } from 'react';
 
