@@ -8,7 +8,7 @@ type SearchBarProps = {
 
 function SearchBar({ value, onChange, placeholder = 'Buscar...' }: SearchBarProps) {
   return (
-    <div className="stgo-search">
+    <div id="buscador" className="stgo-search">
       <input
         type="search"
         className="stgo-search-input"

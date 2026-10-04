@@ -1,5 +1,6 @@
 import './Footer.css';
-import logo from '../../assets/img/logo-stgo.png'
+import logo from '../../assets/img/logo-stgo-2.png'
+import MainMenu from '../MainMenu/MainMenu';
 
 function Footer() {
   return (
@@ -7,7 +8,10 @@ function Footer() {
         <div className="logo">
             <img src={logo} alt="Disquería Stgo" />
         </div>
-        <p>&copy; 2026 Disquería Stgo. Todos los derechos reservados.</p>
+        <div className="footer-nav">
+          <MainMenu />
+        </div>
+        <p className="footer-copyright">&copy; 2026 Disquería Stgo. Todos los derechos reservados.</p>
     </footer>
   );
 }

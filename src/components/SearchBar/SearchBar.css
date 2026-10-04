@@ -6,3 +6,6 @@
     padding: 5px 10px;
     color: #000000;
 }
+#buscador {
+    scroll-margin-top: 100px;
+}

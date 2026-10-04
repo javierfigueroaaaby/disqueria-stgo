@@ -14,18 +14,18 @@ function App() {
   return (   
     <>
       <Header />
-      <section id="hero">
+      <section id="nosotros">
         <Hero
             title="Disquería Stgo"
             subtitle="Encuentra la música de tu vida"
             buttonText="Ver productos"
             image={heroImg}
             buttonColor="primary"
-            buttonUrl="#products"
+            buttonUrl="#productos"
             buttonTarget="_self"
           />
       </section>
-      <section id="products" className="section-py">
+      <section id="productos" className="section-py">
         <h2>Productos Destacados</h2>
         <SearchBar value={search} onChange={setSearch} placeholder="Buscar productos..." />
         <ProductList search={search} />

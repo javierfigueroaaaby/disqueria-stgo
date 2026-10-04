@@ -71,7 +71,7 @@
     font-weight: 600;
     color: #000000;
     margin: 0 0 10px;
-    flex: 1;
+    flex: 0 1 auto;
     background-color: #F1EF20;
     padding: 2px 5px;
     border-radius: 5px;
