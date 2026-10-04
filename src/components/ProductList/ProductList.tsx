@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import type { Product } from '../../types/product'
 import './ProductList.css'
 import ProductCard from '../ProductCard/ProductCard'
+import Loader from '../Loader/Loader'
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
 type ProductListProps = {
   search: string
@@ -34,8 +36,8 @@ function ProductList({ search }: ProductListProps) {
     product.title.toLowerCase().includes(search.toLowerCase())
   )
 
-  if (loading) return <p>Cargando productos...</p>
-  if (error) return <p>Error: {error}</p>
+  if (loading) return <Loader text="Cargando productos..." />
+  if (error) return <ErrorMessage message={error} />
   if (filteredProducts.length === 0) return <p>No se encontraron productos.</p>
 
   return (
